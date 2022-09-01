@@ -5,5 +5,6 @@ app.all('*', function (request, response, next) {
     console.log(request.method + ' to path ' + request.path);
     next();
 });
-app.use(express.static( (typeof argv["rootdir"] != "undefined")?argv["rootdir"] : "." ) );
-app.listen(8080, () => console.log(`listening on port 8080`));
+let root = (typeof argv["rootdir"] != "undefined")?argv["rootdir"] : ".";
+app.use(express.static( root ));
+app.listen(8080, () => console.log(`listening on port 8080 rootdir ${root}`));
