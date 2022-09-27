@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./products_data.js"></script>
+    <script>
+        var num_products = 5;
+        var prod_num = 0;
+    </script>
+</head>
+<body>
+    <table border = "1" id = "table">
+        <tr>
+            <th>Number</th>
+            <th>Item</th>
+        </tr>
+        <tr>
+            <td><script>x = 0; while (++x <=5) {
+                document.write(x); document.write("<br>");
+            }</script></td>
+            <td>
+                <script>while (++prod_num <= num_products) {
+                document.write(`${eval('name' + prod_num )}`); document.write("<br>");
+            }</script></td>
+        </tr>        
+    </table>
+</body>
+<footer>
+
+</footer>
+</html>
